@@ -24,6 +24,7 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -51,3 +52,10 @@ gem 'pry-nav', group: [:development]
 gem 'puma'
 
 gem 'mongoid', github: 'mongoid/mongoid'
+
+gem 'bootstrap-sass'
+
+gem 'devise', git: 'https://github.com/plataformatec/devise', :branch => 'rails4'
+gem 'rails_admin', git: 'https://github.com/sferik/rails_admin', :branch => 'rails-4'
+gem 'rails_admin-i18n', git: 'https://github.com/starchow/rails_admin-i18n'
+gem 'rails-i18n'

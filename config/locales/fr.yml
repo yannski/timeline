@@ -1,0 +1,4 @@
+fr:
+  date:
+    formats:
+      dayview: "%A %e %B"

@@ -1,0 +1,18 @@
+- @events.group_by{|x| x.date_start.day }.each do |res|
+  - group = res.last
+  .row.day
+    .span7.offset4
+      %strong= I18n.l group.first.date_start.to_date, format: :dayview
+  - group.each do |event|
+    .row
+      .span4.hour
+        %strong
+          = I18n.l event.date_start, format: "%H:%M"
+        .muted
+          = human_duration (event.date_end - event.date_start)
+      .span7.event
+        %h3= event.title
+        = simple_format event.body.try(:truncate, 250)
+        %p
+          = link_to "View details »", event, class: "btn"
+        .circle

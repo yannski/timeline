@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+
+
+$sansFontFamily: 'PT Sans', sans-serif
+$serifFontFamily: 'PT Serif', serif
+$bodyBackground: #177491
+$textColor: #0d0d0d
+
+@import bootstrap
+@import bootstrap-responsive
+@import font-awesome
+
+body, html
+  background: image-url('bg-pattern.png') repeat scroll center top #177491
+
+
+/* Flatten das boostrap */
+.hero-unit, .well, .navbar-inner, .popover, .btn, .tooltip, input, select, textarea, pre, .progress, .modal, .add-on, .alert, .table-bordered, .nav>.active>a, .dropdown-menu, .tooltip-inner, .badge, .label, .img-polaroid
+  -moz-box-shadow: none !important
+  -webkit-box-shadow: none !important
+  box-shadow: none !important
+  -webkit-border-radius: 0px !important
+  -moz-border-radius: 0px !important
+  border-radius: 0px !important
+  border-collapse: collapse !important
+  background-image: none !important
+
+.day
+  border-top: 1px solid #f5f5f5
+  border-bottom: 1px solid #f5f5f5
+  background-color: #f5f5f5
+  color: darken(#CCC, 30%)
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1)
+  padding: 5px 0
+  strong
+    margin-left: 60px
+
+.hour
+  text-align: right
+  strong
+    padding-right: 30px
+    margin: 10px 0
+    margin-bottom: 0
+    display: block
+    line-height: 40px
+
+.event
+  border-left: 2px solid #f5f5f5
+  padding-left: 60px
+  position: relative
+  padding-bottom: 20px
+  .circle
+    position: absolute
+    top: 25px
+    left: -7px
+    background-color: red
+    width: 12px
+    height: 12px
+    border-radius: 6px
+
+.content
+  .container
+    background-color: white
+    border-radius: 0 0 5px 5px
+    .row
+      margin-left: 0
+
+.footer
+  border-top: 2px solid #f5f5f5
+  padding: 10px 0
+  p
+    margin-left: 60px

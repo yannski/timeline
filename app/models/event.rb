@@ -5,6 +5,7 @@ class Event
   belongs_to :agenda
 
   field :title, type: String
+  field :body, type: String
   field :date_start, type: Time
   field :date_end, type: Time
   field :url, type: String

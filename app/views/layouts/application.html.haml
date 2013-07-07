@@ -1,0 +1,30 @@
+!!!
+%html{:lang => current_agenda.locale}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}
+    %meta{:charset => "utf-8"}
+    %title= current_agenda.title
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic'
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    :css
+      body {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    /[if lt IE 9]
+      = javascript_include_tag "html5shiv"
+    = csrf_meta_tags
+  %body
+    = render "/shared/navbar"
+    %section.content
+      .container
+        = yield
+        .row.footer
+          .span7.offset4
+            %p © Company 2013
+    / /container
+    = javascript_include_tag "application", "data-turbolinks-track" => true

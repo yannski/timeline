@@ -9,5 +9,7 @@ class Agenda
   field :description, type: String
   field :subdomain, type: String
   field :cname, type: String
-  field :timezone, type: String
+
+  field :time_zone, type: String
+  field :locale, type: String
 end
