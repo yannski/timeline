@@ -50,4 +50,4 @@ gem 'pry-nav', group: [:development]
 
 gem 'puma'
 
-gem 'mongoid'
+gem 'mongoid', github: 'mongoid/mongoid'
